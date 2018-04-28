@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="phase3Complete:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/phase3Complete_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="phase3Complete/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="phase3Complete" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="JAX-WS-Apache Axis" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

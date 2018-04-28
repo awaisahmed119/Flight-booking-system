@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://model" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://model" xmlns:intf="http://model" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://model" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getTimeReturn" type="xsd:string"/>
+   <element name="time" type="xsd:string"/>
+   <element name="status" type="xsd:string"/>
+   <element name="getStatusReturn" type="xsd:string"/>
+   <element name="flag" type="xsd:int"/>
+   <element name="saveInDbReturn" type="xsd:boolean"/>
+   <element name="fid" type="xsd:string"/>
+   <complexType name="Flight">
+    <sequence>
+     <element name="bprice" type="xsd:int"/>
+     <element name="bseats" type="xsd:int"/>
+     <element name="eprice" type="xsd:int"/>
+     <element name="eseats" type="xsd:int"/>
+     <element name="fid" nillable="true" type="xsd:string"/>
+     <element name="fprice" type="xsd:int"/>
+     <element name="from" nillable="true" type="xsd:string"/>
+     <element name="fseats" type="xsd:int"/>
+     <element name="plane" nillable="true" type="xsd:string"/>
+     <element name="reqid" nillable="true" type="xsd:string"/>
+     <element name="reqtype" nillable="true" type="xsd:string"/>
+     <element name="status" nillable="true" type="xsd:string"/>
+     <element name="time" nillable="true" type="xsd:string"/>
+     <element name="to" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="loadAtidReturn" type="impl:Flight"/>
+   <complexType name="ArrayOf_xsd_anyType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <element name="f" type="impl:ArrayOf_xsd_anyType"/>
+   <element name="flag1" type="xsd:boolean"/>
+   <element name="loadfromDbReturn" type="xsd:int"/>
+   <element name="fid1" type="xsd:string"/>
+   <element name="reqid" type="xsd:string"/>
+   <element name="approveReqReturn" type="xsd:boolean"/>
+   <element name="reqid1" type="xsd:string"/>
+   <element name="setfidReturn" type="xsd:string"/>
+   <element name="o" type="xsd:string"/>
+   <element name="d" type="xsd:string"/>
+   <element name="getPriceReturn" type="xsd:string"/>
+   <element name="getFromReturn" type="xsd:string"/>
+   <element name="id" type="xsd:string"/>
+   <element name="time1" type="xsd:string"/>
+   <element name="getSeatsReturn" type="xsd:string"/>
+   <element name="fid2" type="xsd:string"/>
+   <element name="getBseatsReturn" type="xsd:int"/>
+   <element name="getReqidReturn" type="xsd:string"/>
+   <element name="getReqtypeReturn" type="xsd:string"/>
+   <element name="reqid2" type="xsd:string"/>
+   <element name="getEpriceReturn" type="xsd:int"/>
+   <element name="to" type="xsd:string"/>
+   <element name="reqtype" type="xsd:string"/>
+   <element name="getBpriceReturn" type="xsd:int"/>
+   <element name="bseats" type="xsd:int"/>
+   <element name="bprice" type="xsd:int"/>
+   <element name="getToReturn" type="xsd:string"/>
+   <element name="getFseatsReturn" type="xsd:int"/>
+   <element name="from" type="xsd:string"/>
+   <element name="plane" type="xsd:string"/>
+   <element name="getFidReturn" type="xsd:string"/>
+   <element name="fprice" type="xsd:int"/>
+   <element name="fseats" type="xsd:int"/>
+   <element name="eprice" type="xsd:int"/>
+   <element name="getPlaneReturn" type="xsd:string"/>
+   <element name="getFpriceReturn" type="xsd:int"/>
+   <element name="eseats" type="xsd:int"/>
+   <element name="getEseatsReturn" type="xsd:int"/>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getFidResponse">
+
+      <wsdl:part element="impl:getFidReturn" name="getFidReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFidRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getStatusRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setStatusRequest">
+
+      <wsdl:part element="impl:status" name="status"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getToResponse">
+
+      <wsdl:part element="impl:getToReturn" name="getToReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPlaneResponse">
+
+      <wsdl:part element="impl:getPlaneReturn" name="getPlaneReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFromResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getBseatsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getEpriceRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getReqidResponse">
+
+      <wsdl:part element="impl:getReqidReturn" name="getReqidReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSeatsRequest">
+
+      <wsdl:part element="impl:id" name="id"/>
+
+      <wsdl:part element="impl:time1" name="time"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setReqtypeRequest">
+
+      <wsdl:part element="impl:reqtype" name="reqtype"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPlaneRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getBpriceRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFpriceResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getFromRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPriceResponse">
+
+      <wsdl:part element="impl:getPriceReturn" name="getPriceReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFromResponse">
+
+      <wsdl:part element="impl:getFromReturn" name="getFromReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setReqidRequest">
+
+      <wsdl:part element="impl:reqid2" name="reqid"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEpriceResponse">
+
+      <wsdl:part element="impl:getEpriceReturn" name="getEpriceReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTimeRequest">
+
+      <wsdl:part element="impl:time" name="time"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPlaneResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFromRequest">
+
+      <wsdl:part element="impl:from" name="from"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadAtidRequest">
+
+      <wsdl:part element="impl:fid" name="fid"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTimeResponse">
+
+      <wsdl:part element="impl:getTimeReturn" name="getTimeReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="approveReqRequest">
+
+      <wsdl:part element="impl:fid1" name="fid"/>
+
+      <wsdl:part element="impl:reqid" name="reqid"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setfidResponse">
+
+      <wsdl:part element="impl:setfidReturn" name="setfidReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPlaneRequest">
+
+      <wsdl:part element="impl:plane" name="plane"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setBpriceResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setfidRequest">
+
+      <wsdl:part element="impl:reqid1" name="reqid"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStatusResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getToRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFidResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFpriceRequest">
+
+      <wsdl:part element="impl:fprice" name="fprice"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setToResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getBpriceResponse">
+
+      <wsdl:part element="impl:getBpriceReturn" name="getBpriceReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setBseatsRequest">
+
+      <wsdl:part element="impl:bseats" name="bseats"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setBseatsResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFseatsRequest">
+
+      <wsdl:part element="impl:fseats" name="fseats"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadfromDbResponse">
+
+      <wsdl:part element="impl:loadfromDbReturn" name="loadfromDbReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEpriceResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getFseatsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="saveInDbResponse">
+
+      <wsdl:part element="impl:saveInDbReturn" name="saveInDbReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadfromDbRequest">
+
+      <wsdl:part element="impl:f" name="f"/>
+
+      <wsdl:part element="impl:flag1" name="flag"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFseatsResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setEseatsResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getReqtypeRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setTimeResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setToRequest">
+
+      <wsdl:part element="impl:to" name="to"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFseatsResponse">
+
+      <wsdl:part element="impl:getFseatsReturn" name="getFseatsReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setReqidResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setBpriceRequest">
+
+      <wsdl:part element="impl:bprice" name="bprice"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStatusResponse">
+
+      <wsdl:part element="impl:getStatusReturn" name="getStatusReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadAtidResponse">
+
+      <wsdl:part element="impl:loadAtidReturn" name="loadAtidReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBseatsResponse">
+
+      <wsdl:part element="impl:getBseatsReturn" name="getBseatsReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTimeRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setEpriceRequest">
+
+      <wsdl:part element="impl:eprice" name="eprice"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEseatsRequest">
+
+      <wsdl:part element="impl:eseats" name="eseats"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPriceRequest">
+
+      <wsdl:part element="impl:o" name="o"/>
+
+      <wsdl:part element="impl:d" name="d"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSeatsResponse">
+
+      <wsdl:part element="impl:getSeatsReturn" name="getSeatsReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFidRequest">
+
+      <wsdl:part element="impl:fid2" name="fid"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEseatsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setReqtypeResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getEseatsResponse">
+
+      <wsdl:part element="impl:getEseatsReturn" name="getEseatsReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFpriceRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="approveReqResponse">
+
+      <wsdl:part element="impl:approveReqReturn" name="approveReqReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getReqidRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="saveInDbRequest">
+
+      <wsdl:part element="impl:flag" name="flag"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getReqtypeResponse">
+
+      <wsdl:part element="impl:getReqtypeReturn" name="getReqtypeReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFpriceResponse">
+
+      <wsdl:part element="impl:getFpriceReturn" name="getFpriceReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Flight">
+
+      <wsdl:operation name="getTime">
+
+         <wsdl:input message="impl:getTimeRequest" name="getTimeRequest"/>
+
+         <wsdl:output message="impl:getTimeResponse" name="getTimeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTime" parameterOrder="time">
+
+         <wsdl:input message="impl:setTimeRequest" name="setTimeRequest"/>
+
+         <wsdl:output message="impl:setTimeResponse" name="setTimeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setStatus" parameterOrder="status">
+
+         <wsdl:input message="impl:setStatusRequest" name="setStatusRequest"/>
+
+         <wsdl:output message="impl:setStatusResponse" name="setStatusResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStatus">
+
+         <wsdl:input message="impl:getStatusRequest" name="getStatusRequest"/>
+
+         <wsdl:output message="impl:getStatusResponse" name="getStatusResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveInDb" parameterOrder="flag">
+
+         <wsdl:input message="impl:saveInDbRequest" name="saveInDbRequest"/>
+
+         <wsdl:output message="impl:saveInDbResponse" name="saveInDbResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadAtid" parameterOrder="fid">
+
+         <wsdl:input message="impl:loadAtidRequest" name="loadAtidRequest"/>
+
+         <wsdl:output message="impl:loadAtidResponse" name="loadAtidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadfromDb" parameterOrder="f flag">
+
+         <wsdl:input message="impl:loadfromDbRequest" name="loadfromDbRequest"/>
+
+         <wsdl:output message="impl:loadfromDbResponse" name="loadfromDbResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="approveReq" parameterOrder="fid reqid">
+
+         <wsdl:input message="impl:approveReqRequest" name="approveReqRequest"/>
+
+         <wsdl:output message="impl:approveReqResponse" name="approveReqResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setfid" parameterOrder="reqid">
+
+         <wsdl:input message="impl:setfidRequest" name="setfidRequest"/>
+
+         <wsdl:output message="impl:setfidResponse" name="setfidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrice" parameterOrder="o d">
+
+         <wsdl:input message="impl:getPriceRequest" name="getPriceRequest"/>
+
+         <wsdl:output message="impl:getPriceResponse" name="getPriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFrom">
+
+         <wsdl:input message="impl:getFromRequest" name="getFromRequest"/>
+
+         <wsdl:output message="impl:getFromResponse" name="getFromResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSeats" parameterOrder="id time">
+
+         <wsdl:input message="impl:getSeatsRequest" name="getSeatsRequest"/>
+
+         <wsdl:output message="impl:getSeatsResponse" name="getSeatsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFid" parameterOrder="fid">
+
+         <wsdl:input message="impl:setFidRequest" name="setFidRequest"/>
+
+         <wsdl:output message="impl:setFidResponse" name="setFidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBseats">
+
+         <wsdl:input message="impl:getBseatsRequest" name="getBseatsRequest"/>
+
+         <wsdl:output message="impl:getBseatsResponse" name="getBseatsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReqid">
+
+         <wsdl:input message="impl:getReqidRequest" name="getReqidRequest"/>
+
+         <wsdl:output message="impl:getReqidResponse" name="getReqidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReqtype">
+
+         <wsdl:input message="impl:getReqtypeRequest" name="getReqtypeRequest"/>
+
+         <wsdl:output message="impl:getReqtypeResponse" name="getReqtypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setReqid" parameterOrder="reqid">
+
+         <wsdl:input message="impl:setReqidRequest" name="setReqidRequest"/>
+
+         <wsdl:output message="impl:setReqidResponse" name="setReqidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEprice">
+
+         <wsdl:input message="impl:getEpriceRequest" name="getEpriceRequest"/>
+
+         <wsdl:output message="impl:getEpriceResponse" name="getEpriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTo" parameterOrder="to">
+
+         <wsdl:input message="impl:setToRequest" name="setToRequest"/>
+
+         <wsdl:output message="impl:setToResponse" name="setToResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setReqtype" parameterOrder="reqtype">
+
+         <wsdl:input message="impl:setReqtypeRequest" name="setReqtypeRequest"/>
+
+         <wsdl:output message="impl:setReqtypeResponse" name="setReqtypeResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBprice">
+
+         <wsdl:input message="impl:getBpriceRequest" name="getBpriceRequest"/>
+
+         <wsdl:output message="impl:getBpriceResponse" name="getBpriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setBseats" parameterOrder="bseats">
+
+         <wsdl:input message="impl:setBseatsRequest" name="setBseatsRequest"/>
+
+         <wsdl:output message="impl:setBseatsResponse" name="setBseatsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setBprice" parameterOrder="bprice">
+
+         <wsdl:input message="impl:setBpriceRequest" name="setBpriceRequest"/>
+
+         <wsdl:output message="impl:setBpriceResponse" name="setBpriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTo">
+
+         <wsdl:input message="impl:getToRequest" name="getToRequest"/>
+
+         <wsdl:output message="impl:getToResponse" name="getToResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFseats">
+
+         <wsdl:input message="impl:getFseatsRequest" name="getFseatsRequest"/>
+
+         <wsdl:output message="impl:getFseatsResponse" name="getFseatsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFrom" parameterOrder="from">
+
+         <wsdl:input message="impl:setFromRequest" name="setFromRequest"/>
+
+         <wsdl:output message="impl:setFromResponse" name="setFromResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPlane" parameterOrder="plane">
+
+         <wsdl:input message="impl:setPlaneRequest" name="setPlaneRequest"/>
+
+         <wsdl:output message="impl:setPlaneResponse" name="setPlaneResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFid">
+
+         <wsdl:input message="impl:getFidRequest" name="getFidRequest"/>
+
+         <wsdl:output message="impl:getFidResponse" name="getFidResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFprice" parameterOrder="fprice">
+
+         <wsdl:input message="impl:setFpriceRequest" name="setFpriceRequest"/>
+
+         <wsdl:output message="impl:setFpriceResponse" name="setFpriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFseats" parameterOrder="fseats">
+
+         <wsdl:input message="impl:setFseatsRequest" name="setFseatsRequest"/>
+
+         <wsdl:output message="impl:setFseatsResponse" name="setFseatsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEprice" parameterOrder="eprice">
+
+         <wsdl:input message="impl:setEpriceRequest" name="setEpriceRequest"/>
+
+         <wsdl:output message="impl:setEpriceResponse" name="setEpriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPlane">
+
+         <wsdl:input message="impl:getPlaneRequest" name="getPlaneRequest"/>
+
+         <wsdl:output message="impl:getPlaneResponse" name="getPlaneResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFprice">
+
+         <wsdl:input message="impl:getFpriceRequest" name="getFpriceRequest"/>
+
+         <wsdl:output message="impl:getFpriceResponse" name="getFpriceResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEseats" parameterOrder="eseats">
+
+         <wsdl:input message="impl:setEseatsRequest" name="setEseatsRequest"/>
+
+         <wsdl:output message="impl:setEseatsResponse" name="setEseatsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEseats">
+
+         <wsdl:input message="impl:getEseatsRequest" name="getEseatsRequest"/>
+
+         <wsdl:output message="impl:getEseatsResponse" name="getEseatsResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="FlightSoapBinding" type="impl:Flight">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getTime">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTimeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTimeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTime">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setTimeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setTimeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setStatus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setStatusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setStatusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStatus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStatusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStatusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="saveInDb">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="saveInDbRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="saveInDbResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadAtid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadAtidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadAtidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadfromDb">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadfromDbRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadfromDbResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="approveReq">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="approveReqRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="approveReqResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setfid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setfidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setfidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFrom">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFromRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFromResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSeats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSeatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSeatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBseats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBseatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBseatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReqid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getReqidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getReqidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReqtype">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getReqtypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getReqtypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setReqid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setReqidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setReqidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEprice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEpriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEpriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setToRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setToResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setReqtype">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setReqtypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setReqtypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBprice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBpriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBpriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setBseats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setBseatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setBseatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setBprice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setBpriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setBpriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getToRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getToResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFseats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFseatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFseatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFrom">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFromRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFromResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPlane">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPlaneRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPlaneResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFid">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFidRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFidResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFprice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFpriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFpriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFseats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFseatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFseatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEprice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEpriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEpriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPlane">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPlaneRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPlaneResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFprice">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFpriceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFpriceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEseats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEseatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEseatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEseats">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEseatsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEseatsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="FlightService">
+
+      <wsdl:port binding="impl:FlightSoapBinding" name="Flight">
+
+         <wsdlsoap:address location="http://localhost:8080/services/Flight"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

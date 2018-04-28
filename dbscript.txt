@@ -1,0 +1,105 @@
+select * from flights 
+select * from booking
+select * from users
+select count(*) as count from flights
+
+        UPDATE flights
+        SET plane='wdda jahaz',from='3',to='3',time='3',fseats='33',fprice='3',eseats='3'
+        WHERE fid='3'
+        
+   ALTER TABLE flights
+   ADD status varchar(50);
+   
+   drop table booking;
+   select * from tempflights;
+    select * from  flights;
+    
+    
+    
+   CREATE TABLE `flights` (
+  `fid` varchar(50) NOT NULL,
+  `plane` varchar(50) DEFAULT NULL,
+  `from1` varchar(50) DEFAULT NULL,
+  `to1` varchar(50) DEFAULT NULL,
+  `time` varchar(50) DEFAULT NULL,
+  `fseats` int(6) DEFAULT NULL,
+  `fprice` int(6) DEFAULT NULL,
+  `bseats` int(6) DEFAULT NULL,
+  `bprice` int(6) DEFAULT NULL,
+  `eseats` int(6) DEFAULT NULL,
+  `eprice` int(6) DEFAULT NULL,
+  status varchar(50) Default "NotApproved Yet",
+  PRIMARY KEY (`fid`)
+);
+   
+	CREATE TABLE `tempflights` (
+    `reqid` int(6) NOT NULL AUTO_INCREMENT,
+   `fid` varchar(50) NOT NULL,
+   `plane` varchar(50) DEFAULT NULL,
+  `from1` varchar(50) DEFAULT NULL,
+  `to1` varchar(50) DEFAULT NULL,
+  `time` varchar(50) DEFAULT NULL,
+  `fseats` int(6) DEFAULT NULL,
+  `fprice` int(6) DEFAULT NULL,
+  `bseats` int(6) DEFAULT NULL,
+  `bprice` int(6) DEFAULT NULL,
+  `eseats` int(6) DEFAULT NULL,
+  `eprice` int(6) DEFAULT NULL,
+  `status`  varchar(50) Default "Not Approved Yet",
+   reqtype  varchar(50) Default "Add",
+   PRIMARY KEY (reqid)
+) ;
+
+create table booking(
+  email varchar(50) NOT NULL,
+  ticketid  int(6) NOT NULL AUTO_INCREMENT,
+  seatclass  varchar(50) NOT NULL,
+  `plane` varchar(50) DEFAULT NULL,
+  `from1` varchar(50) DEFAULT NULL,
+  `to1` varchar(50) DEFAULT NULL,
+  `time` varchar(50) DEFAULT NULL,
+  `price` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (ticketid)
+  
+);
+
+CREATE TABLE `users` (
+  
+  `uname` varchar(30) NOT NULL primary key,
+  `email` varchar(50) DEFAULT NULL,
+  `pass` varchar(50) DEFAULT NULL,
+  `role` varchar(100) DEFAULT NULL,
+  `status` varchar(100) Default "not verified"
+ 
+);
+
+drop table users;
+insert into users(uname,email,pass,role,status)  values("u1","huz@gmail.com","1234","customer","verified");
+insert into users(uname,email,pass,role,status)  values("u2","huz1@gmail.com","1234","admin","verified");
+insert into users(uname,email,pass,role,status)  values("u3","huz2@gmail.com","1234","manager","verified");
+
+UPDATE users SET email='awais.ahmed119@gmail.com', pass="customer",role="customer",status="verified" where uname='aa';
+select*from users
+
+
+
+INSERT INTO flights select * from tempflights where fid = 'new';
+
+
+UPDATE tempflights SET status='Approved' where fid='new2';
+
+ INSERT INTO flights select * from tempflights where fid ='new2';
+ DELETE FROM tempflights where fid ='new2';
+
+
+insert into flights(fid,plane,from1,to1,time,fseats,fprice,bseats,bprice,eseats,eprice)  values('new3','1', '1','1','1','1','11','1','1','11','1');
+UPDATE  flights SET status='Approved' where fid='new3';
+DELETE FROM tempflights where fid ='new3';
+
+select * from flights
+UPDATE  flights SET from1='Lahore' where fid='1';
+
+
+ where from1 Like '%Lahore%' and to1 Like '%Islamabad%' and fseats>=2
+
+select fprice,bprice,eprice from flights where from1="Lahore" and to1="Karachi"
